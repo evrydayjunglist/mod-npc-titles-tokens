@@ -19,13 +19,11 @@ How to install
 
 ### 1) Simply place the module in a folder of your AzerothCore source folder.
 
-You can clone via git in the azerothcore / modules directory or:
-
-git clone https://github.com/vhipercode/mod-npctitles-tokens.git
+You can clone via git in the azerothcore / modules directory
 
 You can download the module, unzip a folder and update it in the azerothcore / modules directory.
 
-### 2) sql - Npc title (token).sql -> DB world
+### 2) Run TitleMasterNPC-200012.sql -> DB world
 
 ### 3) Rerun the game and launch a clean build of AzerothCore
 
@@ -33,3 +31,5 @@ You can download the module, unzip a folder and update it in the azerothcore / m
 
 ### 5) Add Currency .add 37829 (Brewfest Prize Token)
 
+## Credits
+* [vhiperdev](https://github.com/vhiperdev): (Author)
