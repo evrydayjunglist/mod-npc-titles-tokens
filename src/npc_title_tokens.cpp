@@ -7,6 +7,7 @@
 */
 
 #include "ScriptMgr.h"
+#include "Player.h"
 #include "ScriptedGossip.h"
 #include "DBCStores.h"
 
