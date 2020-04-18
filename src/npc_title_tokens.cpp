@@ -54,7 +54,7 @@ class NPC_Title_Tokens : public CreatureScript
 public:
 	NPC_Title_Tokens() : CreatureScript("NPC_Title_Tokens") { }
 
-	bool OnGossipHello(Player * player, Creature * creature)
+	bool OnGossipHello(Player * player, Creature * creature) override
 	{
 		player->ADD_GOSSIP_ITEM(GOSSIP_ICON_DOT, "|TInterface/ICONS/Achievement_PVP_P_01:24:24:-18:0|tJusticar (100 Tokens)|r", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 0);
 		player->ADD_GOSSIP_ITEM(GOSSIP_ICON_DOT, "|TInterface/ICONS/Achievement_PVP_P_02:24:24:-18:0|tProphet (500 Tokens)|r", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
@@ -74,7 +74,7 @@ public:
 		return true;
 	}
 
-	bool OnGossipSelect(Player * player, Creature * creature, uint32 /*senders*/, uint32 actions)
+	bool OnGossipSelect(Player * player, Creature * creature, uint32 /*senders*/, uint32 actions) override
 	{
 		switch(actions)
 		{
@@ -132,8 +132,8 @@ public:
 
 			case GOSSIP_ACTION_INFO_DEF + 999:
 		        creature->MonsterWhisper("Check back often!", player);
-			    player->PlayerTalkClass->SendCloseGossip();  
-			    break; 
+			    player->PlayerTalkClass->SendCloseGossip();
+			    break;
 		}
 		return true;
 	}
@@ -142,7 +142,7 @@ public:
     {
 		if (player->HasItemCount(token, quantity, true))
 	    {
-		    if (player->HasTitle(title)) 
+		    if (player->HasTitle(title))
 		    {
 		    	player->GetSession()->SendNotification("|cffe84118[ERRO] \n |cfff5f6faYou can not buy titles you already own.");
 		    }
