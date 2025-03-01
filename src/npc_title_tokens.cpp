@@ -6,6 +6,7 @@
 <--------------------------------------------------------------------------->
 */
 
+#include "Chat.h"
 #include "DBCStores.h"
 #include "Player.h"
 #include "ScriptedGossip.h"
